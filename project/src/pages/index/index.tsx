@@ -2,11 +2,16 @@ import React from 'react';
 import CardView from '../../components/card/card';
 import Logo from '../../components/logo/logo';
 import {Helmet} from 'react-helmet-async';
+import { OfferCard } from '../../types/offers';
+import { ReviewCard } from '../../types/reviews';
+
 type PlacesFoundProps = {
   placesCount: number;
+  offers: OfferCard;
+  reviews: ReviewCard;
 }
 
-function MainPage({placesCount}:PlacesFoundProps):JSX.Element {
+function MainPage({placesCount, offers, reviews}:PlacesFoundProps):JSX.Element {
   return(
     <React.Fragment>
       <Helmet>
@@ -99,11 +104,11 @@ function MainPage({placesCount}:PlacesFoundProps):JSX.Element {
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">
-                {CardView()}
-                {CardView()}
-                {CardView()}
-                {CardView()}
-                {CardView()}
+                {CardView}
+                {CardView}
+                {CardView}
+                {CardView}
+                {CardView}
               </div>
             </section>
             <div className="cities__right-section">
